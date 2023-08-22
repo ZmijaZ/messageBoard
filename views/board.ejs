@@ -7,7 +7,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <a href="/messages/new">Add a new message</a>
-    <a href="/messages/board"> View all messages</a>
+    <% for(let message of messages) {%>
+
+    <h2><%= message.user %></h2>
+    <em><%= message.text %></em><br />
+    <span><%= message.added %></span>
+
+    <% } %>
   </body>
 </html>
